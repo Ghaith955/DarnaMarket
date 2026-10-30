@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', system-ui, sans-serif; }
+[dir='rtl'] body { font-family: 'Cairo', 'Inter', system-ui, sans-serif; }
+
+/* Note : les états (hover/focus/disabled) sont écrits en CSS classique pour survivre à la minification de production. */
+.input { @apply w-full border border-stone-300 rounded-lg px-3 py-2 bg-white; }
+.input:focus { @apply outline-none ring-2 ring-amber-500; }
+
+.btn { @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 font-medium bg-amber-700 text-white transition cursor-pointer; }
+.btn:hover { @apply bg-amber-800; }
+.btn:disabled { @apply opacity-50 cursor-not-allowed; }
+
+.btn-outline { @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 font-medium border border-stone-300 bg-white text-stone-700 transition cursor-pointer; }
+.btn-outline:hover { @apply bg-stone-100; }
+.btn-outline:disabled { @apply opacity-50; }
+
+.btn-danger { @apply inline-flex items-center justify-center gap-2 rounded-lg px-3 py-1.5 text-sm font-medium bg-red-600 text-white transition cursor-pointer; }
+.btn-danger:hover { @apply bg-red-700; }
+.btn-danger:disabled { @apply opacity-50; }
+
+.btn-sm { @apply px-3 py-1.5 text-sm; }
+.card { @apply bg-white rounded-xl shadow-sm p-5; }
+.tbl { @apply w-full text-sm text-start; }
+.tbl th { @apply text-start font-semibold text-stone-500 px-3 py-2 border-b border-stone-200 whitespace-nowrap; }
+.tbl td { @apply px-3 py-2 border-b border-stone-100 align-middle; }
+.page { @apply max-w-7xl mx-auto px-4 py-8; }
+.h1 { @apply text-2xl font-bold mb-6; }
